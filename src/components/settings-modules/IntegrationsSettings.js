@@ -8,7 +8,6 @@ function IntegrationsSettings() {
     setAccoutns([...accounts, account]);
   };
   const removeAccount = (account) => {
-    console.log(accounts.indexOf(account));
     setAccoutns(
       accounts.filter((item, id) => id !== accounts.indexOf(account))
     );
