@@ -5,7 +5,7 @@ function AccountSettings() {
   const firstname = useId();
   const lastname = useId();
   const email = useId();
-  const pw = useID();
+  const pw = useId();
   const pw_repeat = useId();
   const jobTitle = useId();
   const [password, setPassword] = useState('');
