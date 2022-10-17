@@ -5,6 +5,8 @@ function AccountSettings() {
   const firstname = useId();
   const lastname = useId();
   const email = useId();
+  const pw = useID();
+  const pw_repeat = useId();
   const jobTitle = useId();
   const [password, setPassword] = useState('');
   return (
@@ -90,7 +92,7 @@ function AccountSettings() {
         <div className='w-1/1 h-[12%] flex flex-row'>
           <div className='w-1/2 h-full flex flex-col pt-5'>
             <label
-              htmlFor={firstname}
+              htmlFor={pw}
               className='text-base font-semibold text-slate-700'
             >
               Current password
@@ -98,12 +100,12 @@ function AccountSettings() {
             <input
               className='rounded w-[90%] border-2 h-[50%] border-slate-400 text-base font-semibold p-2 text-slate-800'
               type='password'
-              id={firstname}
+              id={pw}
             />
           </div>
           <div className='w-1/2 h-full  flex flex-col pt-5'>
             <label
-              htmlFor={lastname}
+              htmlFor={pw_repeat}
               className='text-base font-semibold text-slate-700'
             >
               New Password
@@ -113,7 +115,7 @@ function AccountSettings() {
               type='password'
               onChange={(e) => setPassword(e.target.value)}
               value={password}
-              id={lastname}
+              id={pw_repeat}
             />
           </div>
         </div>
