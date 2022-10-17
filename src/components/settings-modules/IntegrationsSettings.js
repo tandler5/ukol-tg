@@ -24,10 +24,11 @@ function IntegrationsSettings() {
         <p className='text-xl text-left text-slate-600 my-5'>Add Account</p>
         <div className='h-full flex flex-col justify-start overflow-y-scroll pb-48'>
           <div className='flex flex-col justify-evenly mt-3'>
-            {accounts.map((item) => {
+            {accounts.map((item,id) => {
               return (
                 <div
                   onClick={() => removeAccount(item)}
+                  key={id}
                   className='group flex flex-row justify-start px-5 rounded items-center w-full mb-3 border-8 h-20 cursor-pointer border-slate-300 hover:border-dashed hover:border-red-600'
                 >
                   <RiCheckboxCircleFill className=' text-[#70e000] group-hover:text-red-500 bg-slate-100 rounded-full text-2xl w-30' />
